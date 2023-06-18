@@ -1,6 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Box, Typography } from "@mui/material";
 import Search from "./Search";
+import CustomButtons from "./CustomButtons";
 
 export default function Header() {
   const logoUrl =
@@ -16,7 +17,7 @@ export default function Header() {
         boxShadow: "none",
       }}
     >
-      <Toolbar>
+      <Toolbar style={{ minHeight: "55px" }}>
         <Box
           sx={{
             marginLeft: "12%",
@@ -40,8 +41,11 @@ export default function Header() {
               }}
             />
           </Box>
-              </Box>
-              <Search/>
+        </Box>
+        <Search />
+        <Box sx={ {margin:"0 6% 0 auto"}}>
+          <CustomButtons />
+        </Box>
       </Toolbar>
     </AppBar>
   );
