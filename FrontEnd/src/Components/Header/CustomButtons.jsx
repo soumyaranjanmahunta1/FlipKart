@@ -14,7 +14,8 @@ export default function CustomButtons() {
           borderRadius: "1px",
           textTransform: "none",
           padding: "4px 40px",
-          height: "31px",
+          height: "30px",
+          boxShadow: "none",
         }}
       >
         Login
@@ -41,10 +42,12 @@ export default function CustomButtons() {
       >
         More
       </Typography>
-      <Box sx={{ display: "flex", marginRight: "40px",alignItems:"center" }}>
+      <Box sx={{ display: "flex", marginRight: "40px", alignItems: "center" }}>
         <ShoppingCartIcon />
-        <Typography sx={{ fontWeight: "550", fontSize: "14px",marginLeft:"3px" }}>
-           Cart
+        <Typography
+          sx={{ fontWeight: "550", fontSize: "14px", marginLeft: "3px" }}
+        >
+          Cart
         </Typography>
       </Box>
     </Box>

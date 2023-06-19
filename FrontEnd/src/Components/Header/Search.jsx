@@ -18,7 +18,7 @@ export default function Search() {
         sx={{ width: "100%", paddingLeft: "20px" }}
         placeholder="Search for products, brands and more"
       />
-      <Box>
+      <Box sx={{display:"flex"}}>
               <SearchIcon sx={{
                   color: "#2874F0", padding: "4px" }} />
       </Box>
