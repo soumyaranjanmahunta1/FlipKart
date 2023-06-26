@@ -17,7 +17,7 @@ var settings = {
 };
 export default function Banner() {
   return (
-    <Slider {...settings}>
+    <Slider {...settings} >
       {bannerData.map((el,id) => {
         return <img src={el.url} alt="banner" key={id}/>;
       })}

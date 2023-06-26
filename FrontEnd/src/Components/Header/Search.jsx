@@ -15,7 +15,7 @@ export default function Search() {
       }}
     >
       <InputBase
-        sx={{ width: "100%", paddingLeft: "20px" }}
+        sx={{ width: "100%", paddingLeft: "20px",height:"37px" }}
         placeholder="Search for products, brands and more"
       />
       <Box sx={{display:"flex"}}>

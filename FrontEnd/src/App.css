@@ -1,8 +1,4 @@
-
-@media only screen and (max-width: 899px){
-#covidimg {
-    object-fit: cover;
-     height: 130px,
-
-  }
+*{
+  text-decoration: none;
+  color:inherit
 }

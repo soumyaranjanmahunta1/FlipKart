@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Countdown from "react-countdown";
 import Slider from "react-slick";
-
+import { Link } from "react-router-dom";
 import { Box, Button, Divider, Typography } from "@mui/material";
 var settings = {
   dots: false,
@@ -42,7 +42,7 @@ var settings = {
   ],
 };
 
-export default function Slid({ Products,title,timer }) {
+export default function Slid({ Products, title, timer }) {
   const renderer = ({ hours, minutes, seconds }) => {
     return (
       <span>
@@ -93,51 +93,52 @@ export default function Slid({ Products,title,timer }) {
       <Slider {...settings}>
         {Products.products.map((el, id) => {
           return (
-            <Box
-              sx={{
-                padding: "25px 15px",
-                textAlign: "center",
-              }}
-              key={id}
-            >
-              <img
-                src={el.url}
-                alt="product"
-                style={{ width: "auto", height: "150px" }}
-              />
-              <Typography
+            <Link to={`/product/${el.id}`} key={id}>
+              <Box
                 sx={{
-                  fontSize: "14px",
-                  marginTop: "5px",
-                  marginLeft: "-140px",
-                  fontWeight: "600",
-                  color: "#212121",
+                  padding: "25px 15px",
+                  textAlign: "center",
                 }}
               >
-                {el.title.shortTitle}
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "14px",
-                  marginTop: "5px",
-                  marginLeft: "-140px",
-                  color: "green",
-                }}
-              >
-                {el.discount}
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "14px",
-                  marginTop: "5px",
-                  marginLeft: "-140px",
-                  color: "#212121",
-                  opacity: "0.6",
-                }}
-              >
-                {el.tagline}
-              </Typography>
-            </Box>
+                <img
+                  src={el.url}
+                  alt="product"
+                  style={{ width: "auto", height: "150px" }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    marginTop: "5px",
+                    marginLeft: "-140px",
+                    fontWeight: "600",
+                    color: "#212121",
+                  }}
+                >
+                  {el.title.shortTitle}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    marginTop: "5px",
+                    marginLeft: "-140px",
+                    color: "green",
+                  }}
+                >
+                  {el.discount}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    marginTop: "5px",
+                    marginLeft: "-140px",
+                    color: "#212121",
+                    opacity: "0.6",
+                  }}
+                >
+                  {el.tagline}
+                </Typography>
+              </Box>
+            </Link>
           );
         })}
       </Slider>

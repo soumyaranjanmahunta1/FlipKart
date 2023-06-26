@@ -10,13 +10,12 @@ import MiddSec from "./MiddSec";
 export default function Home() {
   const dispatch = useDispatch();
   const Products = useSelector((state) => state.getProducts);
-  console.log(Products);
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
 
   return (
-    <>
+    < div style={{overflow:"hidden"}}>
       <NavBar />
       <Box sx={{ padding: "10px 10px", background: "#F1F3F6" }}>
         <Banner />
@@ -35,6 +34,6 @@ export default function Home() {
           timer={false}
         />
       </Box>
-    </>
+    </div>
   );
 }
